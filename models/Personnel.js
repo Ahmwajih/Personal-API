@@ -43,12 +43,12 @@ const personnelSchema = new mongoose.Schema({
     isActive : {
         type: Boolean,
         required: true
-    
+
     },
     isAdmin : {
         type: Boolean,
         required: true
-    },  
+    },
     isLead : {
         type: Boolean,
         required: true
@@ -57,4 +57,4 @@ const personnelSchema = new mongoose.Schema({
         type: Date,
         required: true
     }
-}, { timestamps: true });    
+}, { timestamps: true });
