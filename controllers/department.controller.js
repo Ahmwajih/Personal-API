@@ -1,4 +1,4 @@
-  const { get } = require('mongoose');
+  const mongoose = require('mongoose');
 const { Department } = require('../models/Department');
 
   module.exports.Department = {

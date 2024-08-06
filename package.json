@@ -19,5 +19,8 @@
     "express-session": "^1.18.0",
     "mongoose": "^8.5.2",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/morgan": "^1.9.9"
   }
 }

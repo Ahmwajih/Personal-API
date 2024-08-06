@@ -1,5 +1,7 @@
-const mongoose = require('mongoose')
+const {mongoose} = require('mongoose')
 const encrypt = require('../helpers/encryptpass')
+
+const Department = require('../models/Department')
 
 const personnelSchema = new mongoose.Schema({
     deparment : {
