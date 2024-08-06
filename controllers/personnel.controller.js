@@ -38,5 +38,13 @@ module.exports.Personnel = {
             message: "Personnel updated",
             data: personnel
         })  
+    },
+    delete: async (req, res) => {
+        const personnel = await Personnel.findByIdAndDelete(req.params.id);
+        res.status(200).send({
+            error: false,
+            message: "Personnel deleted",
+            data: personnel
+        })
     }
 }
