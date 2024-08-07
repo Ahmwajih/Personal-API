@@ -1,6 +1,5 @@
 const {Personnel} = require('../models/Personnel');
 
-
 module.exports.Personnel = {
 
     getAll: async (req, res) => {

@@ -4,18 +4,10 @@ const dotenv = require('dotenv');
 const e = require('express');
 require('dotenv').config();
 
-const dbConnection = async () => {
-    try {
-        await mongoose.connect(process.env.DB_CONNECTION, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-            useFindAndModify: false,
-            useCreateIndex: true
-        });
-        console.log('Database connected');
-    } catch (error) {
-        console.log(error);
+const dbConnection = function() {
+        mongoose.connect(process.env.MONGODB)
+            .then(() => console.log('* DB Connected * '))
+            .catch((err) => console.log('* DB Not Connected * ', err))
     }
-}
 
 exports.dbConnection = dbConnection;
