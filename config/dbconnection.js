@@ -1,7 +1,4 @@
 const mongoose = require('mongoose');
-
-const dotenv = require('dotenv');
-const e = require('express');
 require('dotenv').config();
 
 const dbConnection = function() {
@@ -10,4 +7,8 @@ const dbConnection = function() {
             .catch((err) => console.log('* DB Not Connected * ', err))
     }
 
-exports.dbConnection = dbConnection;
+exports.dbConnection = {
+    mongoose,
+    dbConnection
+
+};

@@ -3,8 +3,11 @@ const {mongoose} = require('mongoose');
 const departmentSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true,
+        trim: true
     }
-}, { timestamps: true });
+}, { collection: "departments",
+    timestamps: true });
 
 const Department = mongoose.model('Department', departmentSchema);

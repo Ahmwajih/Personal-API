@@ -11,11 +11,10 @@ const port = process.env.PORT || 3000;
 const  {dbConnection} = require('./config/dbconnection');
 dbConnection();
 
-const morgan = require('morgan');
+app.use(require('cookie-session')({secret:process.env.SECRET_KEY}))
 
 require ('express-async-errors')
 app.use(express.json());
-app.use(morgan('dev'));
 
 
 
